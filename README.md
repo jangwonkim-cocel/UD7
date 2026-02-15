@@ -104,7 +104,7 @@ $$
 - UBOC does not only “bias-correct”; it **reduces noise** in TD targets.
 - This is especially important early in training, where noisy targets can derail learning.
 
-### 2.3 UBOC TD target (what you implement)
+### 2.3 UBOC TD target
 
 Using N target critics $$Q_1,\dots, Q_N$$, compute:
 
