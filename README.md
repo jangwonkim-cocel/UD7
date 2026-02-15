@@ -51,7 +51,7 @@ $$
 - **Effective overestimation control:** taking a minimum is conservative, often preventing exploding Q-values.
 - **Robust baseline behavior:** works well across many continuous-control tasks.
 
-### Limitations (what the paper highlights)
+### Limitations
 - **High variance:** when critics are poorly learned early on, the min operator can yield high-variance TD targets, destabilizing TD learning and reducing sample efficiency.
 
 **UBOC is motivated by a concrete question:**
