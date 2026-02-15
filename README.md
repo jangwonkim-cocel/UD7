@@ -35,15 +35,7 @@ https://www.sciencedirect.com/science/article/abs/pii/S0925231226001694
 
 ---
 
-# UD7: TD7 + UBOC (Uncertainty-Based Overestimation Correction)
-
-**UD7** is an off-policy actor–critic algorithm that builds on a **TD7-style training pipeline**, while replacing the critic target **formulation** with **UBOC**.
-
-- **TD7 (high level):** UD7 follows TD7’s training recipe for stability and efficiency.y.
-- **UBOC (key change):** a provably grounded target correction that matches the **expected value** of clipped double-Q while reducing target variance by leveraging a critic ensemble.
-- **Main outcome:** more stable learning early on and improved sample efficiency, while remaining competitive over longer horizons.
-
-> This README focuses on **clipped double-Q learning**, **UBOC**, and **what the paper shows empirically**.
+**UD7** is an off-policy actor–critic algorithm that builds on a TD7-style training pipeline, while replacing the critic target **formulation** with **UBOC**.
 
 ---
 
