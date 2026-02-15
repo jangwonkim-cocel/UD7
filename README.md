@@ -84,7 +84,7 @@ $$
 This is the key insight:
 - choosing $$x=1/\sqrt{\pi}$$ makes the corrected estimate **match CDQ in expectation**.
 
-### 2.2 Variance reduction (provable)
+### 2.2 Variance reduction
 
 We can further prove that the estimator
 
