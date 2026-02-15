@@ -22,7 +22,7 @@
 
 ---
 
-## Neurocomputing — PyTorch Implementation
+## PyTorch Implementation
 
 This repository contains a PyTorch implementation of **UD7** of the paper:
 
