@@ -24,7 +24,7 @@
 
 ## Neurocomputing — PyTorch Implementation
 
-This repository contains a PyTorch implementation of **UD7** from the paper:
+This repository contains a PyTorch implementation of **UD7** of the paper:
 
 > **Provable Generalization of Clipped Double Q-Learning for Variance Reduction and Sample Efficiency**  
 > Jangwon Kim, Jiseok Jeong, Soohee Han  
@@ -35,13 +35,13 @@ https://www.sciencedirect.com/science/article/abs/pii/S0925231226001694
 
 ---
 
-# UD7: TD7 Background + UBOC (Uncertainty-Based Overestimation Correction)
+# UD7: TD7 + UBOC (Uncertainty-Based Overestimation Correction)
 
-**UD7** is an off-policy actor-critic algorithm that uses a **TD7-style training pipeline** as the background, and replaces the **critic target construction** with **UBOC**.
+**UD7** is an off-policy actor–critic algorithm that builds on a **TD7-style training pipeline**, while replacing the critic target **formulation** with **UBOC**.
 
-- **TD7 (kept simple):** treat TD7 as the base recipe for training stability and efficiency.
-- **UBOC (the key change):** a provably grounded target correction that **matches the expectation** of clipped double-Q while **reducing target variance** using an ensemble of critics.
-- **Main outcome:** **more stable early training** and **better early-stage sample efficiency**, while remaining competitive over long horizons.
+- **TD7 (high level):** UD7 follows TD7’s training recipe for stability and efficiency.y.
+- **UBOC (key change):** a provably grounded target correction that matches the **expected value** of clipped double-Q while reducing target variance by leveraging a critic ensemble.
+- **Main outcome:** more stable learning early on and improved sample efficiency, while remaining competitive over longer horizons.
 
 > This README focuses on **clipped double-Q learning**, **UBOC**, and **what the paper shows empirically**.
 
@@ -123,7 +123,7 @@ $$
 m(s,a) = \frac{1}{N}\sum_{i=1}^N  Q_i(s,a)
 $$
 
-**Unbiased variance (Approximate)**
+**Unbiased variance (Approximation)**
 
 $$
 \hat v(s,a)=\frac{1}{N-1}\sum_{i=1}^N \left( Q_i(s,a)-m(s,a)\right)^2
@@ -141,7 +141,7 @@ This gives a *dynamic* bias correction driven by critic uncertainty.
 
 ---
 
-## 3) UD7: TD7 Background + UBOC Targets
+## 3) UD7: TD7 + UBOC Targets
 
 **UD7** integrates UBOC into a TD7-style pipeline and emphasizes strong sample efficiency.
 
@@ -155,20 +155,26 @@ This gives a *dynamic* bias correction driven by critic uncertainty.
 
 ## 4) Performance
 
-![Fig. 1 — Performance comparison on MuJoCo benchmarks](figures/performance.png)
+<div align="center">
+  <img src="figures/performance.png" alt="Fig. 1 — Performance comparison on MuJoCo benchmarks" width="800"/>
+</div>
 
 ---
 
 ## 5) Computational Overhead 
 
 Runtime figure (tested on RTX 3090 Ti + Intel i7-12700):
-![Fig. 2 — Runtime comparison](figures/runtime.png)
+
+<div align="center">
+  <img src="figures/runtime.png" alt="Fig. 2 — Runtime comparison" width="300"/>
+</div>
 
 ---
 
 ## Citation
+```
 @article{kim2026provable,
-  title={Provable generalization of clipped double-learning for variance reduction and sample efficiency},
+  title={Provable generalization of clipped double Q-learning for variance reduction and sample efficiency},
   author={Kim, Jangwon and Jeong, Jiseok and Han, Soohee},
   journal={Neurocomputing},
   pages={132772},
