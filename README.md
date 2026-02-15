@@ -44,7 +44,7 @@ https://www.sciencedirect.com/science/article/abs/pii/S0925231226001694
 Clipped double Q-learning is a widely-used bias correction in actor-critic methods (e.g., TD3). It maintains **two critics** and uses the **minimum** of the two as the TD target:
 
 $$
-y_{\text{CDQ}}(s_t,a_t)=r_t+\gamma \min_{i\in\{1,2\}} \bar Q_i(s_{t+1}, a_{t+1})
+y_{\text{CDQ}}(s_t,a_t)=r_t+\gamma \min_{i\in\{1,2\}} Q_i(s_{t+1}, a_{t+1})
 $$
 
 ### Strengths (why CDQ is popular)
