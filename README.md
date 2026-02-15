@@ -59,7 +59,7 @@ $$
 
 ---
 
-## 2) UBOC: Uncertainty-Based Overestimation Correction (Detailed)
+## 2) UBOC: Uncertainty-Based Overestimation Correction
 
 UBOC views the critic outputs as a **distribution of Q estimates** (because function approximation is noisy).  
 Instead of using `min(Q1, Q2)`, UBOC uses **N critics** to estimate:
