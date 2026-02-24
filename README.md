@@ -39,6 +39,14 @@ https://www.sciencedirect.com/science/article/abs/pii/S0925231226001694
 
 ---
 
+## Performance
+
+<div align="center">
+  <img src="figures/performance.png" alt="Fig. 1 — Performance comparison on MuJoCo benchmarks" width="800"/>
+</div>
+
+---
+
 ## 1) Background: Clipped Double Q-Learning (CDQ)
 
 Clipped double Q-learning is a widely-used bias correction in actor-critic methods (e.g., TD3). It maintains **two critics** and uses the **minimum** of the two as the TD target:
@@ -145,15 +153,7 @@ This gives a *dynamic* bias correction driven by critic uncertainty.
 
 ---
 
-## 4) Performance
-
-<div align="center">
-  <img src="figures/performance.png" alt="Fig. 1 — Performance comparison on MuJoCo benchmarks" width="800"/>
-</div>
-
----
-
-## 5) Computational Overhead 
+## 4) Computational Overhead 
 
 Runtime figure (tested on RTX 3090 Ti + Intel i7-12700):
 
